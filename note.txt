@@ -1,0 +1,25 @@
+1.将数字字符串转换为数字
+function toNumber(strNumber){
+	return +strNumber;
+}
+非数字的字符串返回的是NaN;
+
+
+
+2.将Nodelist转化为数组
+var li = document.getElementsByTagName('li');
+var liarr = [].slice.call(li);
+或者
+var liarr = Array.from(li);
+
+3.获取表单元素
+form id = 'd'
+document.getElementById('d').elements[0].value;
+document.getElementById('d').elements['pass'].value;
+document.getElementById('d').color.value;
+
+
+4.使用正则方式截取空格
+String.prototype.trim = function(){
+	return this.replace(/^\s*/,"").replace(/\s*$/,""); 
+}
